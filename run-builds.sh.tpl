@@ -13,7 +13,7 @@ do
   for rpm in $(find /BUILDS-RW/${example} -type f -name "*.rpm")
   do
     echo "Found rpm: ${rpm}"
-    mkdir -p /OUTPUT/${example}/
-    mv ${rpm} /OUTPUT/${example}/
+    mkdir -p /OUTPUT/
+    mv ${rpm} /OUTPUT/
   done
 done

@@ -8,3 +8,5 @@ build_rpmbuild(){
 
 build_rpmbuild centos6
 build_rpmbuild centos7
+build_rpmbuild opensuse13.2
+build_rpmbuild fedora21

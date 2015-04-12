@@ -10,6 +10,9 @@ cp -fR /BUILDS-RO/* /BUILDS-RW/
 for example in $@
 do
   sh /BUILDS-RW/launch-build.sh ${example}
+  echo "-----------------------------------------------------------------------------"
+  echo "  Scanning for resulting RPM files."
+  echo "-----------------------------------------------------------------------------"
   for rpm in $(find /BUILDS-RW/${example} -type f -name "*.rpm")
   do
     echo "Found rpm: ${rpm}"

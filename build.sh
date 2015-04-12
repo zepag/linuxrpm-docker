@@ -1,6 +1,6 @@
 #!/bin/bash
 build_rpmbuild(){
-  cp -f run-builds.sh.tpl rpmbuild-$1/run-builds.sh
+  diff run-builds.sh.tpl rpmbuild-$1/run-builds.sh 2>&1 > /dev/null || cp -f run-builds.sh.tpl rpmbuild-$1/run-builds.sh
   pushd rpmbuild-$1
   docker build -t "zepag/rpmbuild-$1" .
   popd
